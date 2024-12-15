@@ -12,7 +12,6 @@ const AnimalsService = {
         const animals = await this.getAnimals();
         return animals.find(animal => animal.id === id);
     },
-
     async getEndangeredAnimals() {
         const animals = await this.getAnimals();
         return animals.filter(animal => animal.isEndangered);
@@ -21,12 +20,10 @@ const AnimalsService = {
         const animals = await this.getAnimals();
         return animals.filter(animal => animal.habitat === habitat);
     },
-
     async getAnimalsBySpecies(species) {
         const animals = await this.getAnimals();
         return animals.filter(animal => animal.species === species);
     },
-
     async addAnimal(newAnimal) {
         const animals = await this.getAnimals();
         const id = animals.length ? animals[animals.length - 1].id + 1 : 1;
@@ -35,7 +32,6 @@ const AnimalsService = {
         await fsPromises.writeFile(filePath, JSON.stringify(animals, null, 2), "utf-8");
         return animal;
     },
-
     async updateAnimal(id, updates) {
         const animals = await this.getAnimals();
         const index = animals.findIndex(animal => animal.id === id);
@@ -47,7 +43,6 @@ const AnimalsService = {
         await fsPromises.writeFile(filePath, JSON.stringify(animals, null, 2), "utf-8");
         return updatedAnimal;
     },
-
     async deleteAnimal(id) {
         const animals = await this.getAnimals();
         const index = animals.findIndex(animal => animal.id === id);
