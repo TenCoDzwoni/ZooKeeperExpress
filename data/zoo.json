@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
-    "name": "Simba",
-    "species": "Lion",
-    "age": 5,
-    "isEndangered": true,
-    "habitat": "Savanna"
+    "id": 3,
+    "name": "Wilk",
+    "species": "Wolf",
+    "age": 8,
+    "isEndangered": false,
+    "habitat": "Forest"
   },
   {
-    "id": 2,
-    "name": "Dory",
-    "species": "Fish",
-    "age": 2,
-    "isEndangered": false,
-    "habitat": "Ocean"
+    "id": 4,
+    "name": "Rys",
+    "species": "Bobcat",
+    "age": 12,
+    "isEndangered": true,
+    "habitat": "Forest"
   }
 ]

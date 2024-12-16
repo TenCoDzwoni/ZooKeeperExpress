@@ -8,14 +8,14 @@ app.use(express.json());
 
 app.get('/', (req, res) => res.send('Zoo Keeper API is running.'));
 
-//Pobieranie
+//Downloading
 app.get('/animals', AnimalsController.getAllAnimals);
 app.get('/animals/:id', AnimalsController.getAnimalById);
 app.get('/animals/endangered', AnimalsController.getEndangeredAnimals);
 app.get('/animals/habitat/:habitat', AnimalsController.getAnimalsByHabitat);
 app.get('/animals/species', AnimalsController.getAnimalsBySpecies);
 
-//Dodawanie
+//Adding
 app.post('/animals', AnimalsController.addAnimal);
 app.put('/animals/:id', AnimalsController.updateAnimal);
 app.delete('/animals/:id', AnimalsController.deleteAnimal);
